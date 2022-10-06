@@ -1,4 +1,4 @@
-/* EXERCISE 1*/
+// EXERCISE 1
 
 
 let slcBox=document.getElementById('colors');
@@ -21,4 +21,24 @@ function changeColor(){
 slcBox.addEventListener('change',changeColor);
 
 
-/* EXERCISE 2*/
+// EXERCISE 2
+
+
+const btnValidate2=document.getElementById('btnTextArea');
+
+btnValidate2.addEventListener('click', characterControl);
+
+function characterControl(){
+    let txtArea=document.getElementById('description');
+    if(txtArea.value.length==0){
+        alert('Empty text field');
+    }else if(txtArea.value.length>50){
+        alert('The text must contain a maximum of 50 characters');
+    }else{
+        alert('Number of characters correct');
+    }
+}
+
+
+// EXERCISE 3
+
