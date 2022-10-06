@@ -142,7 +142,11 @@ textarea:invalid{animation: shake 0.1635s 0s 3;}
     height: 25px;
     margin: 2%;
     font-size: 0.95rem;
+    text-align: center;
     /* visibility: hidden; */
+}
+#result3-2{
+    font-size: 0.7rem;
 }
 .btn3{
     background-color:navy;
