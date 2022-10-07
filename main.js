@@ -40,7 +40,7 @@ function characterControl(){
 
 // EXERCISE 3
 
-const display31=document.getElementById('result3-1');
+/* const display31=document.getElementById('result3-1');
 const display32=document.getElementById('result3-2');
 const display33=document.getElementById('result3-3');
 const btn31=document.getElementById('validar3-1');
@@ -92,4 +92,87 @@ function validateNumbers(){
     }
 }
 
-btn33.addEventListener('click', validateNumbers);
+btn33.addEventListener('click', validateNumbers); */
+
+
+// EXERCISE 4
+
+
+
+// EXERCISE 5
+
+/* const tag=parameter=>document.getElementById(parameter);
+const first=tag('first');
+const second=tag('second');
+const third=tag('third');
+const fourth=tag('fourth');
+
+first.addEventListener('click', ()=>{ muestra('first')})
+second.addEventListener('click', ()=>{ muestra('second')})
+third.addEventListener('click', ()=>{ muestra('third')})
+fourth.addEventListener('click', ()=>{ muestra('fourth')})
+
+function muestra(num){
+    let imagen=document.images[num].src;
+    let grande=document.images['big'];
+    grande.src=imagen;
+} */
+
+
+// EXERCISE 6
+
+/* const nuevoElemento=document.createElement('p');
+const nuevoTexto=document.createTextNode('Insetando nuevo texto - coex');
+const nuevoNodo=nuevoElemento.appendChild(nuevoTexto);
+
+function fnCrear(){
+    let contenedor=document.getElementById('nuevoTexto');
+    contenedor.appendChild(nuevoNodo);
+}
+
+function copiar(){
+    let copiarNodo= document.getElementById('nuevoTexto');
+    copia=copiarNodo.cloneNode(true);
+    document.getElementById('copia').appendChild(copia);
+}
+
+function eliminar(){
+    let eliminarNodo= document.getElementById('nuevoTexto');
+    eliminarNodo.parentNode.removeChild(eliminarNodo);
+}
+
+let btneliminar=document.getElementById('eliminar');
+btneliminar.addEventListener('click', eliminar);
+
+let btncopiar=document.getElementById('duplicar');
+btncopiar.addEventListener('click', copiar);
+
+let btncrear=document.getElementById('crear');
+btncrear.addEventListener('click', fnCrear); */
+
+
+// EXERCISE 7
+
+
+let listaElementos =document.querySelector('elementos');
+let form=document.querySelector('#frmLista');
+form.addEventListener('submit', fnAgregarElementos)
+
+listaElementos.addEventListener('click', fnEliminarElementos);
+
+
+function fnAgregarElementos(){
+    evento.preventDefault();
+    let newElement=document.getElementById('txtElemento').value;
+
+    let li=document.createElement('li');
+    let btnDelete=document.createElement('button');
+    li.className='list-group-item';
+    btnDelete.className='btn btn-light btn-outline-danger btn-sm float-end delete';
+    li.appendChild(document.createTextNode(newElement));
+    btnDelete.appendChild(document.createTextNode('X'));
+
+    listaElementos.appendChild(li);
+    li.appendChild(btnDelete)
+}
+
