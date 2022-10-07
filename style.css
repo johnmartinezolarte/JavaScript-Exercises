@@ -7,6 +7,7 @@ html{
     font-size: 20px;
 }
 
+
 /*Exercise 1*/
 .exercise1{
     width: 100%;
@@ -49,6 +50,7 @@ html{
     width: 50%;
     height: 30px;
 }
+
 
 /*Exercise 2*/
 .exercise2{
@@ -103,6 +105,7 @@ textarea:invalid {border-color: #fd4444;}
 }
 textarea:invalid{animation: shake 0.1635s 0s 3;}
 
+
 /*Exercise 3*/
 .exercise3{
     width: 100%;
@@ -118,7 +121,7 @@ textarea:invalid{animation: shake 0.1635s 0s 3;}
 }
 .title_exercise3{
     font-size: 1.2rem;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 .form3{
     display: flex;
@@ -127,7 +130,7 @@ textarea:invalid{animation: shake 0.1635s 0s 3;}
 }
 .label-3{
     font-weight: 600;
-    margin-top: 6%;
+    margin-top: 3%;
 }
 .input-3{
     border: solid 2px black;
@@ -140,13 +143,11 @@ textarea:invalid{animation: shake 0.1635s 0s 3;}
 }
 .result3{
     height: 25px;
+    width: 750px;
     margin: 2%;
     font-size: 0.95rem;
     text-align: center;
     /* visibility: hidden; */
-}
-#result3-2{
-    font-size: 0.7rem;
 }
 .btn3{
     background-color:navy;

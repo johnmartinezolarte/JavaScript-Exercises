@@ -64,8 +64,8 @@ btn31.addEventListener('click', validateLetters);
 
 let letterPattern2=/^[a-zA-Z0-9]*$/;
 let numberPattern1=/[0-9]{1}/;
-let txt3='--> El texto comienza con algún carácter alfanumérico, contiene al menos un número y posee más de 5 caracteres <--';
-let txt4='--> El texto NO comienza con algún carácter alfanumérico ó NO contiene al menos un número ó NO posee más de 5 caracteres <--';
+let txt3='--> El texto solo contiene caracteres alfanuméricos y posee 6 caracteres o más <--';
+let txt4='--> El texto NO solo contiene caracteres alfanuméricos ó NO posee 6 caracteres o más <--';
 
 function validateLettersNumbers(){
     let letterNumber=document.getElementById('text3-2').value;
@@ -78,15 +78,14 @@ function validateLettersNumbers(){
 
 btn32.addEventListener('click', validateLettersNumbers);
 
-/* let numberPattern2=/^607/; */
-let numberPattern2=/\(?607\)?/;
+let numberPattern2=/^607\d{7}$/;
 
 let txt5='--> El número inicia con 607 y contiene 10 digitos <--';
 let txt6='--> El número NO inicia con 607 ó NO contiene 10 digitos <--';
 
 function validateNumbers(){
     let numbers=document.getElementById('text3-3').value;
-    if(numberPattern2.test(numbers) && numbers.length===10){
+    if(numberPattern2.test(numbers)){
         display33.innerHTML=txt5
     }else{
         display33.innerHTML=txt6;
