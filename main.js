@@ -1,23 +1,23 @@
 // EXERCISE 1
 
-/* let slcBox=document.getElementById('colors');
-function changeColor(){ */
+let slcBox=document.getElementById('colors');
+function changeColor(){
     /* let slcBox=document.getElementById('colors'); */ /* para cuando sea llamada desde el HTML*/
 
-/*     document.getElementById('number').value=slcBox.selectedIndex;
+    document.getElementById('number').value=slcBox.selectedIndex;
     document.getElementById('text1').value=slcBox.options[slcBox.selectedIndex].text;
-    document.getElementById('text2').value=slcBox.options[slcBox.selectedIndex].value; */
-    /* document.getElementById('text2').value=slcBox.value; */
+    document.getElementById('text2').value=slcBox.options[slcBox.selectedIndex].value;
+    /* document.getElementById('text2').value=slcBox.value; */ //Funciona también de esta manera
 
- /*    let paintColor=slcBox.options[slcBox.selectedIndex].value;
+    let paintColor=slcBox.options[slcBox.selectedIndex].value;
     document.getElementById('value-color').value=('#'+paintColor);
 }
-slcBox.addEventListener('change',changeColor); */
+slcBox.addEventListener('change',changeColor);
 
 
 // EXERCISE 2
 
-/* const btnValidate2=document.getElementById('btnTextArea');
+const btnValidate2=document.getElementById('btnTextArea');
 btnValidate2.addEventListener('click', characterControl);
 function characterControl(){
     let txtArea=document.getElementById('description');
@@ -28,12 +28,12 @@ function characterControl(){
     }else{
         alert('Number of characters correct');
     }
-} */
+}
 
 
 // EXERCISE 3
 
-/* const display31=document.getElementById('result3-1');
+const display31=document.getElementById('result3-1');
 const display32=document.getElementById('result3-2');
 const display33=document.getElementById('result3-3');
 const btn31=document.getElementById('validar3-1');
@@ -76,16 +76,32 @@ function validateNumbers(){
         display33.innerHTML=txt6;
     }
 }
-btn33.addEventListener('click', validateNumbers); */
+btn33.addEventListener('click', validateNumbers);
 
 
 // EXERCISE 4
 
+let teclaPres = document.getElementById("text4-1");
+let resultado = document.getElementById("result4");
+
+window.addEventListener("keypress", function(evento){
+    if(evento.keyCode == 13){
+        resultado.innerHTML = teclaPres.value
+    }
+})
+
+const fnCaracteres = ()=>{
+    let cantidadCar = document.getElementById("text4-2").value.length;
+    let disponibles = 50 -parseInt(cantidadCar);
+    document.getElementById("cantidad").innerHTML = disponibles;
+}
+
+document.getElementById("text4-2").addEventListener("keyup",fnCaracteres);
 
 
 // EXERCISE 5
 
-/* const tag=parameter=>document.getElementById(parameter);
+const tag=parameter=>document.getElementById(parameter);
 const first=tag('first');
 const second=tag('second');
 const third=tag('third');
@@ -98,12 +114,12 @@ function muestra(num){
     let imagen=document.images[num].src;
     let grande=document.images['big'];
     grande.src=imagen;
-} */
+}
 
 
 // EXERCISE 6
 
-/* const nuevoElemento=document.createElement('p');
+const nuevoElemento=document.createElement('p');
 const nuevoTexto=document.createTextNode('Insetando nuevo texto - coex');
 const nuevoNodo=nuevoElemento.appendChild(nuevoTexto);
 function fnCrear(){
@@ -124,18 +140,16 @@ btneliminar.addEventListener('click', eliminar);
 let btncopiar=document.getElementById('duplicar');
 btncopiar.addEventListener('click', copiar);
 let btncrear=document.getElementById('crear');
-btncrear.addEventListener('click', fnCrear); */
+btncrear.addEventListener('click', fnCrear);
 
 
 // EXERCISE 7
-
 
 let listaElementos =document.querySelector('#elementos');
 let form=document.querySelector('#frmLista');
 form.addEventListener('submit', fnAgregarElementos);
 
 listaElementos.addEventListener('click', fnEliminarElementos);
-
 
 function fnAgregarElementos(evento){
     evento.preventDefault();
