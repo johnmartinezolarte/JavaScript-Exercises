@@ -119,21 +119,28 @@ function muestra(num){
 
 // EXERCISE 6
 
-const nuevoElemento=document.createElement('p');
-const nuevoTexto=document.createTextNode('Insetando nuevo texto - coex');
-const nuevoNodo=nuevoElemento.appendChild(nuevoTexto);
+let contenedor=document.getElementById('copia');
 function fnCrear(){
-    let contenedor=document.getElementById('nuevoTexto');
-    contenedor.appendChild(nuevoNodo);
+    if(contenedor.textContent===''){
+        const nuevoElemento=document.createElement('p');
+        const newtext=document.createTextNode('Insertando nuevo texto - coex');
+        nuevoElemento.appendChild(newtext);
+        nuevoElemento.setAttribute('id','nuevoTexto');
+        contenedor.appendChild(nuevoElemento);
+    }
 }
 function copiar(){
-    let copiarNodo= document.getElementById('nuevoTexto');
-    copia=copiarNodo.cloneNode(true);
-    document.getElementById('copia').appendChild(copia);
+    if(contenedor.textContent!==''){
+        let copiarNodo= document.getElementById('nuevoTexto');
+        let copia=copiarNodo.cloneNode(true);
+        contenedor.appendChild(copia);
+    }
 }
 function eliminar(){
-    let eliminarNodo= document.getElementById('nuevoTexto');
-    eliminarNodo.parentNode.removeChild(eliminarNodo);
+    if(contenedor.textContent!==''){
+        let eliminarNodo= document.getElementById('nuevoTexto');
+        eliminarNodo.parentNode.removeChild(eliminarNodo);
+    }
 }
 let btneliminar=document.getElementById('eliminar');
 btneliminar.addEventListener('click', eliminar);
