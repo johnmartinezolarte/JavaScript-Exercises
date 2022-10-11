@@ -79,7 +79,20 @@ function validateNumbers(){
 btn33.addEventListener('click', validateNumbers);
 
 
+// validación para entrada de números decimales: /^[0-9]+\.?[0-9]*$/
+// comprobar si una cadena es un número escribiremos: /^\d$/
+
+
 // EXERCISE 4
+
+// teclaPres.addEventListener("keypress", function(){
+//     alert("Tecleado");
+// })
+
+// Ejemplo 2: El siguiente ejemplo muestra el código del carácter que ingreso en la caja de texto
+// teclaPres.addEventListener("keypress", function(evento){
+//     document.getElementById("rtaTeclado").innerHTML=evento.keyCode;
+// })
 
 let teclaPres = document.getElementById("text4-1");
 let resultado = document.getElementById("result4");
